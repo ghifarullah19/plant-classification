@@ -9,7 +9,7 @@ COPY requirements.txt requirements.txt
 COPY app.py app.py
 COPY pipeline.py pipeline.py
 COPY class_names.pkl class_names.pkl
-COPY myvgg16_model.h5 myvgg16_model.h5
+COPY botanify_model_vgg16_v3.keras botanify_model_vgg16_v3.keras
 
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
