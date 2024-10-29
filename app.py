@@ -3,7 +3,7 @@ from tensorflow.keras.models import load_model
 import numpy as np
 import pickle
 import cv2
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def detect():
         if request.files.get('image') is None or request.files['image'].filename == '':
             return jsonify(error=1, message='Image is required')
         # Load model
-        MODEL_PATH = "myvgg16_model.h5"
+        MODEL_PATH = "botanify_model_vgg16_v3.keras"
         # Load pickle (ini adalah nama class atau label yang digunakan)
         PICKLE_PATH = "class_names.pkl"
 
