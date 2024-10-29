@@ -6,10 +6,10 @@ WORKDIR /app
 
 # Copy the necessary files to the container
 COPY requirements.txt requirements.txt
-COPY python/app.py app.py
-COPY python/pipeline.py pipeline.py
-COPY python/class_names.pkl class_names.pkl
-COPY python/myvgg16_model.h5 myvgg16_model.h5
+COPY app.py app.py
+COPY pipeline.py pipeline.py
+COPY class_names.pkl class_names.pkl
+COPY myvgg16_model.h5 myvgg16_model.h5
 
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
