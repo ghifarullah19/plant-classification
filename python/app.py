@@ -7,7 +7,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/detect', methods=['GET', 'POST'])
+@app.route('/detect', methods=['POST'])
 def detect():
     if request.method == 'POST':
         if request.files.get('image') is None or request.files['image'].filename == '':
