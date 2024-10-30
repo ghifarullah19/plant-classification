@@ -13,7 +13,7 @@ def detect():
         if request.files.get('image') is None or request.files['image'].filename == '':
             return jsonify(error=1, message='Image is required')
         # Load model
-        MODEL_PATH = "botanify_model_vgg16_v3.keras"
+        MODEL_PATH = "myvgg16_model.h5"
         # Load pickle (ini adalah nama class atau label yang digunakan)
         PICKLE_PATH = "class_names.pkl"
 
